@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+nav {
+  background-color: rgb(12, 12, 73);
+  color: rgb(206, 55, 193);
+  font-weight: bold;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 25px;
+  }
+
+  .navBTNS {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    p {
+      background-color: rgb(12, 12, 73);
+      color: rgb(254, 247, 176);
+      font-size: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p:hover {
+      color: rgb(119, 214, 214);
+    }
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  height: 400px;
+  color: rgb(12, 12, 73);
+  background-image: url("Bilder/Banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+.filters {
+  background-color: rgb(191, 215, 215);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+
+  #dayFilter {
+    background-color: rgb(191, 215, 215);
+    color: rgb(149, 38, 140);
+    border: solid rgb(149, 38, 140);
+    border-radius: 5px;
+  }
+
+  #stageFilter {
+    background-color: rgb(191, 215, 215);
+    color: rgb(149, 38, 140);
+    border: solid rgb(149, 38, 140);
+    border-radius: 5px;
+  }
+
+  #genreFilter {
+    background-color: rgb(191, 215, 215);
+    color: rgb(149, 38, 140);
+    border: solid rgb(149, 38, 140);
+    border-radius: 5px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}
+
+.container-lineUp {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(191, 215, 215);
+  justify-content: center;
+  justify-items: center;
+}
+
+.lineUp {
+  margin: 2px;
+  padding: 2px;
+  width: 350px;
+  height: 350px;
+  margin: 10px;
+  background-color: rgb(12, 12, 73);
+  background: linear-gradient(
+    to bottom right,
+    rgb(254, 247, 176),
+    rgb(12, 12, 73),
+    rgb(12, 12, 73),
+    rgb(12, 12, 73),
+    rgb(12, 12, 73),
+    rgb(12, 12, 73),
+    rgb(206, 55, 193),
+    rgb(254, 247, 176)
+  );
+  color: rgb(254, 247, 176);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lineUp:hover {
+  outline: 5px solid rgb(206, 55, 193);
+}
+
+.artist-name {
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: space-around;
+}
+
+.artist-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  p {
+    border: solid rgb(119, 214, 214);
+    color: rgb(119, 214, 214);
+    padding: 4px;
+    border-radius: 5px;
+  }
+}
+
+.map {
+  background-color: rgb(191, 215, 215);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  h1 {
+    color: rgb(149, 38, 140);
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+.om {
+  background-color: rgb(12, 12, 73);
+  color: rgb(191, 215, 215);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: rgb(206, 55, 193);
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+  }
+
+  .archive {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+footer {
+  height: 400px;
+  background-color: rgb(12, 12, 73);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .footer-info {
+    flex-direction: column;
+    text-align: center;
+    color: rgb(119, 214, 214);
+  }
+
+  .footer-info-token {
+    padding-bottom: 10px;
+  }
+
+  i {
+    color: rgb(206, 55, 193);
+    font-size: 30px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 500px) {
+  .container-lineUp {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    justify-items: center;
+  }
+
+  .banner {
+    padding-bottom: 100px;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+
+  #dayFilter {
+    margin: 10px;
+  }
+
+  #stageFilter {
+    margin: 10px;
+  }
+
+  #genreFilter {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .banner {
+    padding-bottom: 100px;
+
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  footer {
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .footer-info {
+      text-align: start;
+    }
+  }
+}
